@@ -65,7 +65,7 @@ class BudgetTracker {
         transactionDiv.innerHTML = `
             <span>${transaction.description}</span>
             <span class="transaction-amount-container"
-              >$${Math.abs(transaction.amount).toFixed(
+              >KSh${Math.abs(transaction.amount).toFixed(
                 2
               )} <button class="delete-btn" data-id="${
           transaction.id
@@ -101,7 +101,7 @@ class BudgetTracker {
       0
     );
 
-    this.balanceElement.textContent = `Balance: $${balance.toFixed(2)}`;
+    this.balanceElement.textContent = `Balance: KSh${balance.toFixed(2)}`;
     this.balanceElement.style.color = balance >= 0 ? "#2ecc71" : "#e74c3c";
   }
 }
